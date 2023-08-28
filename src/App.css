@@ -1,0 +1,53 @@
+.mycss{
+    max-width: calc(1200px * 3);
+}
+
+.card{
+    background-color: white;
+    padding: 1px;
+    transition: transform ease-in-out 0.2s;
+    height: 350px;
+}
+
+.card:hover{
+    border: 1px solid #1382ad;
+    transform: translateY(-8px);
+    z-index: 9;
+}
+
+.card:hover .wishlist{
+  display: flex;
+}
+
+.card:hover .small_cart{
+  display: block;
+}
+
+.big{
+  transition:transform 0.1s ;
+  transform: scale(1.1);
+}
+
+/* .card:hover .title{
+  display: none;
+} */
+
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e9e7e7;
+  }
+
+
+  ::-webkit-scrollbar-thumb {
+    background: #9e9d9d;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #858181;
+  }
