@@ -63,8 +63,8 @@ const ProductDetailsPage = () => {
             <div className='bg-white min-h-screen '>
 
                 {isError ? <p className='text-red-500 text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Something went wrong!</p> : isLoadding ? <img src="/lodder.svg" alt="loadder"  className='absolute top-1/2 left-1/2 -translate-x-1/2 h-20'/> :
-                <div className='p-10 flex justify-between bg-white mt-3 lg:flex-col items-center'>
-                    <div className=' mr-5 w-5/12 lg:w-9/12'>
+                <div className='p-10 sm:p-5   flex justify-between bg-white mt-3 lg:flex-col items-center'>
+                    <div className=' mr-5 w-5/12 lg:w-9/12 other2:w-full'>
                         <figure className='m-0 h-96 w-full min-w-full bg-gray-300'>
                             <img src={product.length !== 0 && product?.images[imgIndex]} alt="thumbnail" className='w-full h-full' />
                         </figure>
@@ -72,15 +72,15 @@ const ProductDetailsPage = () => {
                     </div>
 
                     <div className='w-1/2 px-3 lg:w-full'>
-                        <h1 className='text-4xl font-semibold tracking-wide '>{product.title}</h1>
-                        <div className='flex my-3'>
+                        <h1 className='text-4xl font-semibold tracking-wide other2:text-2xl '>{product.title}</h1>
+                        <div className='flex my-3 '>
                             <p className='text-xl mr-3 flex'>Brand :   <p className='text-lg mx-2'> {product.brand}</p> </p> |
-                            <p className='flex items-center text-xl ml-3'>Ratting : {product.length !== 0 && product?.rating.toFixed(1)} <span className='text-red-400'><AiTwotoneStar /></span></p>
+                            <p className='flex items-center text-xl ml-3 sm:ml-1 sm:text-sm other2:text-lg'>Ratting : {product.length !== 0 && product?.rating.toFixed(1)} <span className='text-red-400'><AiTwotoneStar /></span></p>
                         </div>
-                        <div className='flex w-72 justify-between my-3'>
-                            <h1 className='text-xl '>Price : <span className='font-bold text-sky-700'>Rs.{parseInt(useDiscount(product?.price, product.discountPercentage))}</span></h1>
-                            <h1 className='text-gray-400'><del>Rs.{product?.price}</del></h1>
-                            <h1 className='text-red-400 font-bold'>({parseInt(product?.discountPercentage)}% OFF)</h1>
+                        <div className='flex w-72 other2:w-60 justify-between other2:items-center my-3 flex-wrap'>
+                            <h1 className='text-xl '>Price : <span className='font-bold text-sky-700 other2:text-lg'>Rs.{parseInt(useDiscount(product?.price, product.discountPercentage))}</span></h1>
+                            <h1 className='text-gray-400 other2:text-xs other2:px-1'><del>Rs.{product?.price}</del></h1>
+                            <h1 className='text-red-400 font-bold other2:text-sm'>({parseInt(product?.discountPercentage)}% OFF)</h1>
                         </div>
                         <h1 className='text-xl font-semibold'>Description : </h1>
                         <p>{product?.description}</p>

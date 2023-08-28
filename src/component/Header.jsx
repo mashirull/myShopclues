@@ -14,6 +14,10 @@ const Header = () => {
 
   const [burger , setBurger] = useState(false)
 
+  const setHamBurger = () => {
+    setBurger(false)
+  }
+
   const cartProduct = useSelector(state => state.cart.cartProductsItems)
   const user = useSelector(state => state.auth.user)
   const isloggedIn = useSelector(state => state.auth.isLoggedIn)
@@ -27,7 +31,7 @@ const Header = () => {
       <div className='flex items-center '>
         <h1 className='text-3xl sm:text-2xl font-bold text-sky-500 relative'>SHOPCLUES.</h1>
         <div className={`${burger ? 'lg2:block' : 'lg2:hidden'} flex items-center lg2:absolute lg2:top-16 lg2:right-0 lg2:bg-red-100 lg2:p-6`}>
-          <NavItems />
+          <NavItems setHamBurger = {setHamBurger} />
           
         </div>
       </div>

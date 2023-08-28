@@ -57,7 +57,7 @@ const LoginPage = () => {
 
 
   return (
-    <div className='mx-auto my-20 bg-white w-1/3 py-6 px-10 relative'>
+    <div className='mx-auto my-20 bg-white w-1/3 py-6 px-10 relative lg:w-72'>
         <h1 className='text-center text-2xl font-bold text-sky-500'>LOGIN</h1>
         <form action="" onSubmit={submitHandler}>
             <label htmlFor="username" className='block my-2'>Username</label>
