@@ -34,7 +34,6 @@ const LoginPage = () => {
           const data = await response.json()
 
           if(response.ok){
-            console.log('login succesfull')
             setLodder(false)
             dispatch(login(data))
             navigate('/product')

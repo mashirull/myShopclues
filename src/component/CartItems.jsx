@@ -54,7 +54,7 @@ const CartItems = ({product , index}) => {
                     </div>
                     <div className='flex items-center justify-between h-auto text-md'>
                         <p className='p-0 text-right w-32 sm:w-20 text-gray-500'>Discount : </p>
-                        <span className='font-bold w-24 sm2:w-12 '>-₹ {(product.price - parseInt(useDiscount(product.price, product.discountPercentage))) * product.productQty}</span>
+                        <span className='font-bold w-24 sm2:w-12 '>-₹ {((product.price - parseInt(useDiscount(product.price, product.discountPercentage))) * product.productQty).toFixed(2)}</span>
                     </div>
                     <div className='flex items-center justify-between h-auto text-md'>
                         <p className='p-0 text-right w-32 sm:w-20 text-gray-500'>Shiping fee : </p>

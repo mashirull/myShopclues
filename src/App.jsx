@@ -20,7 +20,7 @@ function App() {
 
   const dispatch = useDispatch()
 
-  const isloggedIn = useSelector(state => state.auth.isLoggedIn)
+  // const isloggedIn = useSelector(state => state.auth.isLoggedIn)
 
   useEffect(()=>{
        dispatch(fetchDealOfDayProduct())
@@ -36,7 +36,7 @@ function App() {
           <Route path='/product'  element = {<Product/>}/>
           <Route path='/product/:productId' element= {<ProductDetailsPage/>}/>
           <Route path='/cart'   element = {<CartPage/>} />
-          <Route path='/wishlist' element = {isloggedIn ? <WishListPage/> : <Navigate replace to={'/auth/login'}/>}/>
+          <Route path='/wishlist' element = {<WishListPage/>}/>
           <Route path='/auth/login' element={<LoginPage/>}/>
           <Route  path='*'   element = {<ErrorPage/>}  />
       </Routes>
