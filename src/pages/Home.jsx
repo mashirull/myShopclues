@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Crousel  images = {images} height = {80}/>
-      <p>{isOnLine}</p>
+      {/* <p>{isOnLine}</p> */}
       <DealsOfDay/>
       <BudgetBazar/>
     </>
